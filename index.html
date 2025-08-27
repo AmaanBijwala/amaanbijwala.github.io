@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Amaan Bijwala Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="images/LJIcon.PNG" href="images/LJIcon.PNG">
+
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Amaan Bijwala</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img"  style="background-image:url(images/bg_1.PNG);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Amaan Bijwala</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Engineer   ',
+						'Web Developer    ',
+            'Java Trainer    ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+						</script>
+
+						<br>
+						<br>
+			            <h2>A Java Developer </h2>
+						<h2 class="d-flex" style="margin-bottom: 0">With over 2+ years of experience</h2>
+						<br>
+						 
+			            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+  <a href="https://www.linkedin.com/in/amaan-bijwala-836833213/" class="btn  py-3 px-3 btn-animated btn-linkedin" target="_blank">
+    <i class="fab fa-linkedin"></i> Let’s Connect
+  </a>
+  <a href="https://github.com/AmaanBijwala/spring-ai-project" class="btn  py-3 px-3 btn-animated btn-github" target="_blank">
+    <i class="fab fa-github"></i> Explore My Code
+  </a>
+
+  						
+
+
+</div>
+                </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+   <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+  <div class="container">
+    <div class="row">
+      <div class="row d-flex align-items-stretch">
+
+        <!-- Profile Image and Skills -->
+        <div class="col-md-6 col-lg-5 d-flex">
+          <div class="img-about img d-flex align-items-stretch">
+            <div class="overlay">
+              <div class="row">
+                <div class="col-sm-6 col-md-5">
+                  <div class="about-img">
+                    <img src="images/about-me.PNG" class="img-fluid rounded b-shadow-a" alt="">
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-7">
+                  <div class="about-info">
+                    <p><span class="title-s">Name: </span> <span>Amaan Bijwala</span></p>
+                    <p><span class="title-s">Education: </span> <span>B.Tech</span></p>
+                    <p><span class="title-s">Experience: </span> <span>2.8 Years</span></p>
+                    <p><span class="title-s">Address: </span> <span>Mumbai, India</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skill-mf">
+                <p class="title-s">Skills</p>
+
+                <span>Java</span> <span class="pull-right">95%</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <span>Spring Boot</span> <span class="pull-right">85%</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <span>Redis</span> <span class="pull-right">90%</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <span>Oracle SQL</span> <span class="pull-right">85%</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <span>DSA</span> <span class="pull-right">55%</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 55%;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Me Text -->
+        <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+          <div class="row justify-content-start pb-3">
+            <div class="col-md-12 heading-section ftco-animate">
+              <h1 class="big">About</h1>
+              <h2 class="mb-4">About Me</h2>
+              <p>B.E. graduate and Java developer with expertise in Redis, Kafka, Oracle SQL, and building scalable backend systems. Passionate about developing robust applications and exploring new technologies. Excited to connect with professionals and contribute to impactful projects.</p>
+
+              <ul class="about-info mt-4 px-md-0 px-2">
+                <li class="d-flex"><span>Profile:</span> <span>Full Stack Java Developer</span></li>
+                <li class="d-flex"><span>Database Management:</span> <span>Oracle SQL, MySQL-8.0, Redis</span></li>
+                <li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering</span></li>
+                <li class="d-flex"><span>Language:</span> <span>English, Gujarati, Hindi, Marathi</span></li>
+                <li class="d-flex"><span>Tools:</span> <span>IntelliJ IDEA, Selenium, VS Code, WinSCP, Putty, Kafka, CI-CD, Docker, Kubernetes, Git, JIRA, Postman</span></li>
+                <li class="d-flex"><span>Technologies & Frameworks:</span> <span>JSON, XML, JSP, Microservices, Spring Boot, MVC, Hibernate, Collections, JPA, JUnit, REST Services</span></li>
+                <li class="d-flex"><span>Interest:</span> <span>Traveling, Teaching</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+			<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 d-flex justify-content-center align-items-center flex-column text-center">
+				<div class="counter-wrap ftco-animate mt-md-3">
+					<div class="text">
+					<p class="mb-4">
+						<span class="number" data-number="5">0</span> <span>+</span>
+						<span>&nbsp; Projects completed</span>
+					</p>
+					<p>
+						<a href="https://www.linkedin.com/in/amaan-bijwala-836833213/" class="btn btn-primary py-3 px-3">LinkedIn</a>
+					</p>
+					</div>
+				</div>
+				</div>
+			</div>
+			</div>
+		</section>
+
+		<section class="ftco-section ftco-no-pb" id="resume-section">
+			<div class="container">
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2022-2025</span>
+						<h2>Associate Software Developer(Java)</h2>
+						<span class="position">Receivables Exchange Of India </span>
+						<p class="mt-4">
+<h5>
+  <a href="https://www.rxil.in/treds/" target="_blank" style="color: #705fe0; text-decoration: none;">
+    TReDS Invoice Discounting Platform
+  </a>
+</h5>
+
+    <p><small><strong>Skills:</strong> Java, REST APIs, Oracle SQL,Server Deployment </small></p>
+
+        <ul>
+            <li>Developed new features and extended back-end capabilities to improve and optimize existing platform code, enhancing overall system performance.</li>
+            <li>Worked with REST APIs to retrieve and display data from databases, ensuring seamless data flow between front-end and back-end systems.</li>
+            <li>Implemented the MVC pattern using JSP, Servlets, and BO controllers to improve code organization and maintainability.</li>
+            <li>Integrated Redis database into Java applications using the Jedis library to improve performance and scalability.</li>
+            <li>Used log4j for application and error logging, ensuring proper monitoring of application performance.</li>
+            <li>Troubleshot production logs, identified issues, and fixed backend bugs to ensure smooth application operations.</li>
+            <li>Performed code reviews, managed code merging, and deployed code across various testing environments to ensure consistent quality and functionality.</li>
+            <li>Wrote Python scripts to schedule automated emails using schedulers, streamlining communication processes, and for efficient data maangement.</li>
+        </ul>
+						</p>
+					</div>
+
+				</div>
+				<div class="col-md-6">
+        <div class="resume-wrap ftco-animate">
+          <span class="date">2025-Present</span>
+    <h2>Java Developer</h2>
+    <span class="position">Fable Fintech</span>
+    <p class="mt-4">
+<h5>
+  <a href="https://www.fablefintech.com/" target="_blank" style="color: #705fe0; text-decoration: none;">
+    Cross-Border Remittance System
+  </a>
+</h5>
+    <p><small><strong>Skills:</strong> Java, Spring Boot, REST APIs, Third-Party API Integration, AML </small></p>  
+  <ul>
+    <li>Developed and integrated third-party APIs to enable person-to-person cross-border remittance payments for the India–Australia corridor.</li>
+    <li>Implemented real-time currency conversion by fetching latest exchange rate quotes via APIs.</li>
+    <li>Performed AML (Anti-Money Laundering) checks on cross-border transactions to ensure safe and compliant payments.</li>
+    <li>Generated payment receipts and reports upon successful booking of transactions, enhancing transparency.</li>
+    <li>Completed POC (Proof of Concept) for third-party API integrations to validate system functionality.</li>
+    <li>Designed backend services using Spring Boot to handle transaction requests efficiently and securely.</li>
+    <li>Worked on REST APIs for seamless communication between frontend, backend, and third-party services.</li>
+    <li>Optimized system performance to handle high-volume cross-border transactions with minimal latency.</li>
+    <li>Collaborated with the team to implement error handling, logging, and monitoring for reliable transaction processing.</li>
+</ul>
+
+    </p>
+  </div>
+</div>
+
+	<h1 class="big-4">Projects</h1>
+			<div class="underline"></div>
+			<section class="ftco-section" id="project-section">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-3">
+      <div class="col-md-7 heading-section text-center ftco-animate">
+        <h1 class="big big-2">Projects</h1>
+        <h2 class="mb-4">My Projects</h2>
+        <p>Some of the featured projects I've worked on recently.</p>
+      </div>
+    </div>
+<style>
+  body {
+    background-color: #121212;
+    color: #f5f5f5;
+  }
+
+  .blog-entry {
+    background-color: #1e1e1e;
+    border: 1px solid #2c2c2c;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+  }
+
+  .blog-entry:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+  }
+
+  .block-20 {
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    width: 100%;
+  }
+
+  .blog-entry .heading a,
+  .blog-entry p,
+  .blog-entry a.btn {
+    color: #ffffff;
+  }
+
+  .blog-entry a.btn.btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+
+  .blog-entry a.btn.btn-primary:hover {
+    background-color: #0056b3;
+  }
+
+  a.btn.btn-primary {
+    color: #fff;
+  }
+</style>
+
+<div class="row">
+
+ <div class="row">
+
+  
+  <!-- Project 1 -->
+  <div class="col-md-4 d-flex ftco-animate">
+    <div class="blog-entry">
+      <a href="https://github.com/AmaanBijwala/spring-ai-project" class="block-20 zoom-effect"
+        style="background-image: url('images/springAi.png');"></a>
+      <div class="text mt-3">
+        <h3 class="heading">
+          <a href="https://github.com/AmaanBijwala/spring-ai-project">Stock Photo Generator</a>
+        </h3>
+        <p>Built a full-stack Stock Photo Generator using Spring Boot and Spring AI, integrated with the OpenAI API for image generation. Implemented RESTful services and secure backend authentication. Designed a user-friendly interface to allow users to generate and download AI-powered stock images.</p>
+        <a href="https://github.com/AmaanBijwala/spring-ai-project" target="_blank" class="btn btn-sm btn-primary mt-2">View on GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 2 -->
+  <div class="col-md-4 d-flex ftco-animate">
+    <div class="blog-entry">
+      <a href="https://github.com/AmaanBijwala/SpringBoot_E-commerce_Proj" class="block-20 zoom-effect"
+        style="background-image: url('images/ecom-img.png');"></a>
+      <div class="text mt-3">
+        <h3 class="heading">
+          <a href="https://github.com/AmaanBijwala/SpringBoot_E-commerce_Proj">Enterprise eCommerce App</a>
+        </h3>
+        <p>Developed a production-grade eCommerce web application using Spring Boot, React, JPA, and PostgreSQL/MySQL. Implemented REST APIs, user authentication with Spring Security & JWT, role-based access, shopping cart, orders, and payment of product.</p>
+        <a href="https://github.com/AmaanBijwala/SpringBoot_E-commerce_Proj" target="_blank" class="btn btn-sm btn-primary mt-2">View on GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 3 -->
+  <div class="col-md-4 d-flex ftco-animate">
+    <div class="blog-entry">
+      <a href="https://github.com/AmaanBijwala/Invoice-Porcessing-System" class="block-20 zoom-effect"
+        style="background-image: url('images/inv-process-img.png');"></a>
+      <div class="text mt-3">
+        <h3 class="heading">
+          <a href="https://github.com/AmaanBijwala/Invoice-Porcessing-System">Invoice Processing System</a>
+        </h3>
+        <p>Built a full-stack Invoice Processing System leveraging React, Material UI, Spring Boot, Hibernate, and MySQL. Implemented automated invoice generation and tracking with validations and error handling. Designed a user-friendly dashboard for managing invoices, payments, and client data.</p>
+        <a href="https://github.com/AmaanBijwala/Invoice-Porcessing-System" target="_blank" class="btn btn-sm btn-primary mt-2">View on GitHub</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Project 4 
+  <div class="col-md-4 d-flex ftco-animate">
+    <div class="blog-entry">
+      <a href="https://github.com/laxman235/employee-management-system" class="block-20 zoom-effect"
+        style="background-image: url('images/Employe.png');"></a>
+      <div class="text mt-3">
+        <h3 class="heading">
+          <a href="https://github.com/laxman235/employee-management-system">Employee Management System</a>
+        </h3>
+        <p>Tracks employee data, roles, departments, salaries, attendance, and performance with CRUD operations using Java, Spring Boot, and MySQL.</p>
+        <a href="https://github.com/laxman235/employee-management-system" target="_blank" class="btn btn-sm btn-primary mt-2">View on GitHub</a>
+      </div>
+    </div>
+  </div>
+
+   Project 5 
+  <div class="col-md-4 d-flex ftco-animate">
+    <div class="blog-entry">
+      <a href="https://github.com/laxman235/firstjobapp" class="block-20 zoom-effect"
+        style="background-image: url('images/FIrstjobappp.png');"></a>
+      <div class="text mt-3">
+        <h3 class="heading">
+          <a href="https://github.com/laxman235/firstjobapp">First Job App</a>
+        </h3>
+        <p>Tracks employee data, roles, departments, salaries, attendance, and performance with CRUD operations using Java, Spring Boot, and MySQL.</p>
+        <a href="https://github.com/laxman235/firstjobapp" target="_blank" class="btn btn-sm btn-primary mt-2">View on GitHub</a>
+      </div>
+    </div>
+  </div>-->
+
+</div>
+
+</div>
+
+		<!-- Education Section -->
+<section class="ftco-section ftco-no-pb" id="resume-section">
+  <div class="container">
+    <div class="row">
+      <h1 class="big-4">Education</h1>
+      <div class="underline"></div>
+    </div>
+    
+<div class="row">
+  <div class="col-md-6">
+    <div class="resume-wrap ftco-animate">
+      <span class="date">2018-2022</span>
+      <h2>Bachelor of Engineering</h2>
+      <span class="position">M.H. Saboo Siddik College Of Engineering </span>
+      <p class="mt-4">Grade: First Class with Distinction. (8.83/10) CGPA</p>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="resume-wrap ftco-animate">
+      <span class="date">2017-2018</span>
+      <h2>Higher Secondary School</h2>
+      <span class="position">Valia Jr. College of Science</span>
+      <p class="mt-4">Grade: First Class with Distinction. (80.46 %)</p>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Download CV Button -->
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6 text-center ftco-animate">
+        <p><a href="Docs/Amaan_Bijwala_Resume.pdf" download class="btn btn-primary py-4 px-5">Download CV</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Counter Section -->
+<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+  <div class="container py-5">
+    <div class="row justify-content-center text-center">
+
+      <div class="col-md-3 d-flex justify-content-center mb-4">
+        <div class="block-18 counter-wrap ftco-animate">
+          <div class="text">
+            <strong class="number" data-number="7">0</strong>
+            <span>Achievements</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 d-flex justify-content-center mb-4">
+        <div class="block-18 counter-wrap ftco-animate">
+          <div class="text">
+            <strong class="number" data-number="6">0</strong>
+            <span>Projects</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 d-flex justify-content-center mb-4">
+        <div class="block-18 counter-wrap ftco-animate">
+          <div class="text">
+            <strong class="number" data-number="200">0</strong>
+            <span>Cups of Coffee</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- LeetCode Rank Counter -->
+      <div class="col-md-3 d-flex justify-content-center mb-4">
+        <div class="block-18 counter-wrap ftco-animate">
+          <div class="text">
+            <strong class="number" id="leetcode-rank">0</strong>
+            <span>LeetCode Rank</span>
+            <p style="margin-top: 5px;">
+              <a href="https://leetcode.com/Amaan281" target="_blank" style="color: #fff; text-decoration: underline;">
+                ID: Amaan281
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<script>
+  async function getLeetCodeStats(username) {
+    try {
+      const response = await fetch(`https://leetcode-stats-api.herokuapp.com/${username}`);
+      const data = await response.json();
+      document.getElementById("leetcode-rank").textContent = data.ranking || "N/A";
+    } catch (error) {
+      document.getElementById("leetcode-rank").textContent = "N/A";
+    }
+  }
+  getLeetCodeStats("Amaan281");
+</script>
+
+
+<!-- GitHub Section -->
+<section class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg);">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-7 ftco-animate text-center">
+        <h2>More Projects on <span>GitHub</span></h2>
+        <div class="heading">
+          <h4>I love to solve business problems &amp; uncover hidden data stories</h4>
+          <br>
+          <p><a href="https://github.com/AmaanBijwala" class="btn btn-primary py-3 px-5">GitHub</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Jogeshwari (West), Mumbai, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+91 9029122928</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:janakwadelaxman23@gmail.com">bijwalaamaan2000@gmail.com</a></p>
+	          </div>
+          </div>
+<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+  <div class="align-self-stretch box p-4 text-center">
+    <a href="Docs/Amaan_Bijwala_Resume.pdf" download style="text-decoration: none; color: inherit;">
+      <div class="icon d-flex align-items-center justify-content-center">
+        <span class="icon-globe"></span>
+        <br><br>
+      </div>
+      <h3 class="mb-4">Download Resume</h3>
+    </a>
+  </div>
+</div>
+
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSdkKJajc0rmjenhHuYGsaSctSTmsmcmx3OzoQ4mA6f5oHioWA/viewform?usp=header" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <!--<li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li>-->
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/amaan-bijwala-836833213/"><span class="icon-linkedin"></span></a></li>  
+					  <!--<li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-twitter"></span></a></li>-->
+					  <!--<li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-facebook"></span></a></li>-->
+				      <li class="ftco-animate"><a href="https://www.instagram.com/laksh.janakwade58"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+   <!-- <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+			
+			  <p>< Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	<!--Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://bigaimtech.com/" target="_blank">Bigaimtech</a>
+	Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer> 
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
