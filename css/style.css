@@ -9810,3 +9810,10 @@ a.btn.btn-primary {
     color: #0077b5;
     box-shadow: 0 0 15px #0077b5;
 	}
+
+@media (max-width: 768px) {
+  .hero-wrap {
+    background-image: none !important;
+  }
+}
+
